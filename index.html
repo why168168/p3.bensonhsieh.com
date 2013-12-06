@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  	<title>Project 3 </title>
+  	
+  	<link rel="stylesheet" href="css/main.css" type="text/css">
+  	<link rel="stylesheet" href="css/features.css" type="text/css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  	<script src="./js/acupoint.js"></script>
+  	<script src="./js/radio_body.js"></script>
+  	  	
+</head>
+
+<body>
+    <div id='wrapper'>
+      	<h1>Acupoint</h1>
+      	<!-- Left side with all the controls -->
+      	<div id='controls'>			
+        		<!--Select body part-->
+        		<div id="chart">
+                <h2>Select the body part</h2>
+                <select id="select_body_part">
+                    <option value="body1">General</option>
+                    <option value="body2">Head</option>
+                    <option value="body3">Back</option>
+                    <option value="body4">Arms</option>
+                    <option value="body5">Legs</option>
+                </select>
+            </div> <br><br>
+            
+            <!-- changed according to the selected body part-->
+            <!-- default is General-->
+            <div id='radio_body'>
+      		
+      		  </div>		
+    		
+      		 <!-- Recipient -->	
+      			<h2>Acupoint...</h2>	
+        			<input type='text' id='recipient' maxlength="50" placeholder="input text(max:50)"> 
+        			<span class='error' id='recipient-error'></span>
+      			<br><br><br>   			
+    		
+      	    <!-- Find the picture in google-->
+      			<h2>Find your own from Google</h2><br>
+      			<input type='text' id='sticker-search'>
+      			<input type='button' id='sticker-search-btn' value='Search'>
+      			<br>
+      			<small>Ex: &ldquo;unicorns&rdquo;, &ldquo;sparkles&rdquo;, &ldquo;balloons&rdquo;</small>
+      			
+      			<div id='sticker-search-results'></div>    			
+      			   			
+    	</div>
+    	<!-- end of the controls -->
+    	    	
+    	<!-- Right side with the live preview -->
+    	<div id='preview'>    	
+      		<div id='card-background'>
+      			<div id='canvas'>
+      				<div id='message-output'></div>
+      				<div id='recipient-output'></div>
+      			</div>
+      	  </div>
+    		
+      		<!-- Buttons -->
+      		<input type='button' id='refresh-btn' value='Start over'>
+      		<input type='button' id='print-btn' value='Print'>
+    	</div>  
+    	
+    	<!-- pick the picture from the marquee -->   		
+			<div id='marker_pick'>
+			   <p>Pick a marker</p>
+	    	 <marquee height="200" width="150" bgcolor="#ffffff" scrollamount="2" scrolldelay="20" direction="up" onmouseover="this.stop()" onmouseout="this.start()">
+         
+            <div align="left" style="margin: 10px;">
+            <img class='stickers' src="./img/circle.png">        
+            </div>                     
+            <div align="left" style="margin: 10px;">         
+            <img class='stickers' src="./img/arrow.png">            
+            </div>            
+            <div align="left" style="margin: 10px;">
+            <img class='stickers' src="./img/face.png">            
+            </div>              
+                  
+        </marquee>
+  	  </div>   	
+   </div>
+   <!--end of the wrapper-->	
+
+</body>
+
+</html>
