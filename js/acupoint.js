@@ -170,7 +170,7 @@ function construct_radio(body)
             html += "<br>";           
         }
     }   
-    $("#radio_body").html(html);
+    $('#radio_body').html(html);
     
     radio_select();
 }
@@ -247,7 +247,8 @@ function print() {
 	// Goal: Open the card in a new tab
    
     // Take the existing card on the page (in the #canvas div) and clone it for the new tab
-    var canvas_clone = $('#canvas').clone();
+    //var canvas_clone = $('#canvas').clone();
+    var canvas_clone = $('#for_image').clone();
         
     /* 
     Next, we need to get the HTML code of the card element

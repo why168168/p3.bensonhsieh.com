@@ -1,6 +1,38 @@
+The following notes serve as a roadmap of all the steps to complete the project.
+For full documentation, refer to the final source code:
+
+index.php
+login.php
+logout.php
+build.php
+queryLists.php
+storeList.php
+regester.php
+header.php
+login_form.php
+profolio.php
+register_form.php
+footer.php
+config.php
+functions.php
+constant.php
+acupoint.js
+radio_body.js
+login.js
+scripts.js
+showLists.js
+storeList.js
+features.css
+main.css
+style.css
+
 Topics covered:
 
 Ajax
+JQuery
+PHP
+Html
+MySql
 Event listeners
 .css()
 .val()
@@ -10,98 +42,56 @@ Event listeners
 .clone()
 .remove()
 If...else...
+Session
 jQueryUI (.draggable())
-The following notes serve as a roadmap of all the steps to complete the project.
-For full documentation, refer to the well-commented final source code:
+Bootstrap (carousel, navbar, row of colums)
 
-index.html (Use View Source to see HTML code)
-radio_body.js
-acupoint.js
-features.css
-main.css
+Log in:
+Check if user has input the correct username and password. Also check if the text field is empty or not. After log in, the id and username will be stored in $_SESSION value. 
 
-Open the following files in your code editor:
+Sign up:
+For new user to register an account. After sing up, the id and username will be stored in $_SESSION value.
 
-/index.html
-/css/features.css
-/css/main.css
-/js/acupoint.js
-/js/radio_body.js
+Log out:
+After log in with the correct username and password, the top right corner will show the log out button and the username. The $_SESSION will be destroyed. 
 
-body.gif
-circle.png
-arrow.png
-face.png
+User status:
+The functions of Build and Show acupoint pictures will open to those who have apply an account.
 
-Color chooser
-Step 1: Add the color blocks and style them.
-
-Step 2: Write a click listener for the color blocks.
-
-Figure out what color was clicked using $(this):
-
-In many object-oriented programming languages, this (or self) is a keyword which can be used in instance methods to refer to the object on which the currently executing method has been invoked. -wikipedia
-
-jQuery ¡§this¡¨ keyword
-
-Step 3: Introduce JavaScript variables to store the color.
-
-Step 4: Assign the color to #canvas, a div which is already in the HTML.
-
+Dropdown menu:
+The contents of dropdown menu includes General, Head, Back, Arms and Legs.
+Step 1: Add the menu and style them.
+Step 2: Write a dropdown listener for the menu.
+Step 3: Introduce JavaScript variables to store the dropdown contents.
+Step 4: Assign the #dropdown  a div which is already in the HTML.
 Step 5: CSS cursor property (cursor:pointer;) to make the color blocks look clickable.
 
-Textures chooser
-Step 1: Add the 4 texture blocks and style them.
 
-Step 2: Write a click listener for the texture blocks.
+Radio button select:
+The radio button is related to the selection of the dropdown menu. The contents are saved in the radio_body.js file.
+Step 1: Add the related radio button and style them.
+Step 2: Write a radio button listener for the menu.
+Step 3: Introduce JavaScript variables to store the radio button.
+Step 4: Assign the #radio_select, a div which is already in the HTML.
+Step 5: CSS cursor property (cursor:pointer;) to make the color blocks look clickable.
 
-Step 3: Make the color picker also change the color of the texture blocks.
-
-Bonus: Add one more texture to your options.
-
-Message
-Step 1: Add the 4 message radios, each with the name='message' and a unique id.
-
-Step 2: After each radio, create a label element.
-
-Give each label a for attribute to match the id of the radio it's labeling.
-
-Step 4: Attach a click event to the radio buttons.
-
-Step 5: Note there's a div with the id #message already in the #canvas. Use .html() to put the message in that div.
-
-(Bonus) Font chooser
-Add an option that lets you choose the font of your message
-
-Recipient
-Step 1: Add a text input.
-
-Step 2: Attach a keyup event to that text input.
-
+Symptom description:
+This input text will be added to the symptom description message.
+Step 1: create a input element.
+Step 2: Attach a key_up event to the input element.
 Step 3: Use the .val() method to retrieve content entered in form elements; store the results in a variable.
-
 Step 4: Use .html to put the message in the existing #recipients div in the canvas.
-
 Step 5: Concatenate strings with the + operator to add an exclamation point to the end of the person's name.
 
 Recipient Error checking
 Step 1: Add a maxlength attribute on the recipient text field to limit the characters to 14.
-
 Step 2: Use the JS .length String property to determine how many characters a user has entered; store the results in a variable.
-
 Step 3: Show a countdown message of how many characters the user has left.
-
 Step 4: Use an If...Else statement to toggle the color of the message depending on whether the user have enough characters left (grey) or not (red).
 
-Bonus: If you go back and delete the recipient, you're left with just an exclamation point on the card. Make it so this only shows if the user has something typed in.
-
-Hint: var validate = recipient.replace(" ", "", recipient);
-
-Stickers
-Step 1: Add the 6 stickers, and give them a click listener.
-
+Chose the markers
+Step 1: Add the 7 marker, and give them a click listener and sticker style.
 Step 2: Use the .clone() method to duplicate the stickers on click.
-
 Step 3: Use the .prepend() method add the cloned sticker to the canvas.
 
 Draggable stickers
@@ -109,5 +99,4 @@ Step 1: Add jQuery UI to your page, right after the jQuery include.
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 Step 2: Use the .draggable() interaction on the stickers.
-
 Step 3: Contain the draggable elements to the canvas
